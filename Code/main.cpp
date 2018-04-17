@@ -4,8 +4,8 @@
 int main() {
 
     vector<double> lowerBound;
-    lowerBound.push_back(-1.0);
-    lowerBound.push_back(-1.0);
+    lowerBound.push_back(0.0);
+    lowerBound.push_back(0.0);
 
     vector<double> upperBound;
     upperBound.push_back(10.0);
