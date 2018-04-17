@@ -1,9 +1,10 @@
 #include <iostream>
 #include <pthread.h>
 #include <math.h>
+#include <vector>
 #include "cmake-build-debug/Population.h"
 
-/* Código sequencial */
+/* Código com multi thread e com sincronização */
 int main() {
 
     /* Clock variables */

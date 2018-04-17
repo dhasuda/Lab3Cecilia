@@ -36,12 +36,16 @@ vector
 Particle.h
 /Users/davigrossihasuda/Documents/ITA/Cecilia/Labs/Lab 3/Code/cmake-build-debug/Particle.h
 
-/Users/davigrossihasuda/Documents/ITA/Cecilia/Labs/Lab 3/Code/main.cpp
+/Users/davigrossihasuda/Documents/ITA/Cecilia/Labs/Lab 3/Code/main2.cpp
 iostream
+-
+stdlib.h
 -
 pthread.h
 -
 math.h
+-
+vector
 -
 cmake-build-debug/Population.h
 /Users/davigrossihasuda/Documents/ITA/Cecilia/Labs/Lab 3/Code/cmake-build-debug/Population.h

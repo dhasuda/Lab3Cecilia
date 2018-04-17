@@ -1,1 +1,1 @@
-/Library/Developer/CommandLineTools/usr/bin/c++  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/Code.dir/main.cpp.o CMakeFiles/Code.dir/CostFunction.cpp.o CMakeFiles/Code.dir/Particle.cpp.o CMakeFiles/Code.dir/Population.cpp.o  -o Code 
+/Library/Developer/CommandLineTools/usr/bin/c++   -std=c++11 -pthread -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/Code.dir/main.cpp.o CMakeFiles/Code.dir/CostFunction.cpp.o CMakeFiles/Code.dir/Particle.cpp.o CMakeFiles/Code.dir/Population.cpp.o  -o Code 

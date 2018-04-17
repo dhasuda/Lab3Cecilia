@@ -9,6 +9,12 @@ double CostFunction::getCost(vector<double> x) {
     if (x.size() != 2) {
         return -1;
     }
-    return -(x[0]*x[0] + x[1]*x[1]);
-    //return (fabs(x[0]) + fabs(x[1])) / (x[0]*x[0] + x[1]*x[1] + 2);
+    if (x[0] <= 0) {
+        return 999999999999.9;
+    }
+    double priceFactor = (exp(-(x[0]*x[0]))) / x[0];
+    double marketingFactor = 2.0/(1.0 + exp(-x[1]));
+    double pricePerUnit = 200;
+//    printf("%lf\n", priceFactor*marketingFactor*(x[0]-x[1]-pricePerUnit));
+    return (priceFactor*marketingFactor*(x[0]-pricePerUnit))-x[1];
 }

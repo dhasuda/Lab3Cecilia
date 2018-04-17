@@ -1,4 +1,4 @@
-# Install script for directory: /Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 3/Code
+# Install script for directory: /Users/davigrossihasuda/Documents/ITA/Cecilia/Labs/Lab 3/Code
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 3/Code/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/davigrossihasuda/Documents/ITA/Cecilia/Labs/Lab 3/Code/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -12,17 +12,19 @@ using namespace std;
 
 class Population {
 public:
-    Population(int numberOfParticles, int xSize, vector<double> lowerBound, vector<double> upperBound);
+    Population(int numberOfParticles, int xSize, vector<double> lowerBound, vector<double> upperBound, unsigned int seed);
     ~Population() = default;
     void runOneIteration();
     double getGlobalBest();
     vector<double> getGlobalBestPosition();
+    void setGlobalBest(double globalBest, vector<double> globalBestPosition);
 private:
     vector<Particle> particles;
     double globalBest;
     vector<double> globalBestPosition;
     vector<double> lowerBound;
     vector<double> upperBound;
+    unsigned int seed;
 };
 
 
