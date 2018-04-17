@@ -1,0 +1,4 @@
+/Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 3/Code"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 3/Code/cmake-build-debug

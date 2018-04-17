@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 3/Code/cmake-build-debug/CostFunction.cpp
+CostFunction.h
+/Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 3/Code/cmake-build-debug/CostFunction.h
+math.h
+-
+
+/Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 3/Code/cmake-build-debug/CostFunction.h
+vector
+-
+
+/Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 3/Code/cmake-build-debug/Particle.cpp
+Particle.h
+/Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 3/Code/cmake-build-debug/Particle.h
+CostFunction.h
+/Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 3/Code/cmake-build-debug/CostFunction.h
+
+/Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 3/Code/cmake-build-debug/Particle.h
+vector
+-
+
+/Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 3/Code/cmake-build-debug/Population.cpp
+Population.h
+/Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 3/Code/cmake-build-debug/Population.h
+
+/Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 3/Code/cmake-build-debug/Population.h
+vector
+-
+Particle.h
+/Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 3/Code/cmake-build-debug/Particle.h
+
+/Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 3/Code/main.cpp
+iostream
+-
+cmake-build-debug/Population.h
+/Users/davigrossihasuda/Documents/ITAndroids/IA/Treinamento 2018/Aulas/Otimização 3/Code/cmake-build-debug/Population.h
+
