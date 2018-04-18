@@ -3,7 +3,6 @@
 #include <pthread.h>
 #include <math.h>
 #include <vector>
-#include <semaphore.h>
 #include "cmake-build-debug/Population.h"
 
 #include <stdio.h>
@@ -18,7 +17,7 @@ int numberOfThreads = 4;
 int sizeOfPopulation = 25;
 
 // Variavel das threads
-sem_t mutex;
+pthread_mutex_t sincVar;
 
 #define up(SEM) _up(SEM,#SEM)
 #define down(SEM) _down(SEM,#SEM)
@@ -47,10 +46,10 @@ void *popGenerator(void *lpParam) {
     for (int i=0; i<1000; i++) {
         pop.runOneIteration();
         if (pop.getGlobalBest() > m_globalBest) {
-            down(&mutex);
+            pthread_mutex_lock(&sincVar);
             m_globalBest = pop.getGlobalBest();
             m_globalBestPosition = pop.getGlobalBestPosition();
-            up(&mutex);
+            pthread_mutex_unlock(&sincVar);
         }
     }
 
@@ -66,7 +65,7 @@ int main() {
     struct timespec start, finish;
     double elapsed;
 
-    sem_init(&mutex, 0, 1);
+    pthread_mutex_init(&sincVar, NULL);
     pthread_t threadId[100];
 
     /* Começando a contar o tempo */

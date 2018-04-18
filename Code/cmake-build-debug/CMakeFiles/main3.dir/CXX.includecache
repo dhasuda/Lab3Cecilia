@@ -47,8 +47,6 @@ math.h
 -
 vector
 -
-semaphore.h
--
 cmake-build-debug/Population.h
 /Users/davigrossihasuda/Documents/ITA/Cecilia/Labs/Lab 3/Code/cmake-build-debug/Population.h
 stdio.h
