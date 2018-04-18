@@ -24,7 +24,7 @@ int main() {
 
     Population pop = Population(1000, 2, lowerBound, upperBound, 1);
 
-    for (int i=0; i<100; i++) {
+    for (int i=0; i<1000; i++) {
         pop.runOneIteration();
     }
 

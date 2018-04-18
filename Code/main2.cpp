@@ -14,7 +14,7 @@ vector<double> m_globalBestPosition;
 
 // Variaveis globais
 int numberOfThreads = 4;
-int sizeOfPopulation = 25;
+int sizeOfPopulation = 250;
 
 void *popGenerator(void *lpParam) {
 
@@ -30,7 +30,7 @@ void *popGenerator(void *lpParam) {
 
     Population pop = Population(sizeOfPopulation, 2, lowerBound, upperBound, seed);
 
-    for (int i=0; i<10000; i++) {
+    for (int i=0; i<1000; i++) {
 
         if (m_globalBest > pop.getGlobalBest()) {
             pop.setGlobalBest(m_globalBest, m_globalBestPosition);

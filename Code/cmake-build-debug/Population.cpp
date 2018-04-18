@@ -3,6 +3,7 @@
 //
 
 #include "Population.h"
+#include <stdlib.h>
 
 Population::Population(int numberOfParticles, int xSize, vector<double> lowerBound, vector<double> upperBound, unsigned int seed) {
     this->lowerBound = lowerBound;
