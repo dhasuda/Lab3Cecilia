@@ -11,7 +11,7 @@ int main() {
     double elapsed;
 
     vector<double> lowerBound;
-    lowerBound.push_back(1.0);
+    lowerBound.push_back(200.0);
     lowerBound.push_back(0.0);
 
     vector<double> upperBound;
@@ -22,15 +22,16 @@ int main() {
     // clock_t begin = clock();
     clock_gettime(CLOCK_MONOTONIC, &start);
 
-    Population pop = Population(100, 2, lowerBound, upperBound, 1);
+    Population pop = Population(1000, 2, lowerBound, upperBound, 1);
 
-    for (int i=0; i<1000; i++) {
+    for (int i=0; i<100; i++) {
         pop.runOneIteration();
     }
 
     /* Terminando de contar o tempo */
     clock_gettime(CLOCK_MONOTONIC, &finish);
 
+    printf("cost func = %lf\n", pop.getGlobalBest());
     printf("Price: %lf, Marketing investment: %lf\n", pop.getGlobalBestPosition()[0], pop.getGlobalBestPosition()[1]);
 
     elapsed = (finish.tv_sec - start.tv_sec);
