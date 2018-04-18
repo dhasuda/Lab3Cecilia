@@ -45,6 +45,11 @@ void *popGenerator(void *lpParam) {
     Population pop = Population(sizeOfPopulation, 2, lowerBound, upperBound, seed);
 
     for (int i=0; i<1000; i++) {
+
+        if (m_globalBest > pop.getGlobalBest()) {
+            pop.setGlobalBest(m_globalBest, m_globalBestPosition);
+        }
+
         pop.runOneIteration();
         if (pop.getGlobalBest() > m_globalBest) {
             down(&sincVar);
