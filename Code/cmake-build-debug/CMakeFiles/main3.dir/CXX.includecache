@@ -36,7 +36,7 @@ vector
 Particle.h
 /Users/davigrossihasuda/Documents/ITA/Cecilia/Labs/Lab 3/Code/cmake-build-debug/Particle.h
 
-/Users/davigrossihasuda/Documents/ITA/Cecilia/Labs/Lab 3/Code/main2.cpp
+/Users/davigrossihasuda/Documents/ITA/Cecilia/Labs/Lab 3/Code/main3.cpp
 iostream
 -
 stdlib.h
@@ -46,6 +46,8 @@ pthread.h
 math.h
 -
 vector
+-
+semaphore.h
 -
 cmake-build-debug/Population.h
 /Users/davigrossihasuda/Documents/ITA/Cecilia/Labs/Lab 3/Code/cmake-build-debug/Population.h

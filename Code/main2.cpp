@@ -5,8 +5,8 @@
 #include <vector>
 #include "cmake-build-debug/Population.h"
 
-#define WINAPI
-
+#include <stdio.h>
+#include <semaphore.h>
 
 // Variaveis acessadas por todas as threads
 double m_globalBest;
@@ -16,31 +16,29 @@ vector<double> m_globalBestPosition;
 int numberOfThreads = 4;
 int sizeOfPopulation = 25;
 
-unsigned long WINAPI popGenerator(void *lpParam) {
+void *popGenerator(void *lpParam) {
 
-//    int *threadId = (int *)lpParam;
-//    unsigned int seed = abs(threadId);
-//
-//    vector<double> lowerBound;
-//    lowerBound.push_back(1.0);
-//    lowerBound.push_back(0.0);
-//
-//    vector<double> upperBound;
-//    upperBound.push_back(1000.0);
-//    upperBound.push_back(1000000.0);
-//
-//    Population pop = Population(sizeOfPopulation, 2, lowerBound, upperBound, seed);
-//
-//    for (int i=0; i<1000; i++) {
-//        pop.runOneIteration();
-//        if (pop.getGlobalBest() > m_globalBest) {
-//            m_globalBest = pop.getGlobalBest();
-//            m_globalBestPosition = pop.getGlobalBestPosition();
-//        }
-//    }
+    unsigned int seed = time(NULL);
+
+    vector<double> lowerBound;
+    lowerBound.push_back(1.0);
+    lowerBound.push_back(0.0);
+
+    vector<double> upperBound;
+    upperBound.push_back(1000.0);
+    upperBound.push_back(1000000.0);
+
+    Population pop = Population(sizeOfPopulation, 2, lowerBound, upperBound, seed);
+
+    for (int i=0; i<1000; i++) {
+        pop.runOneIteration();
+        if (pop.getGlobalBest() > m_globalBest) {
+            m_globalBest = pop.getGlobalBest();
+            m_globalBestPosition = pop.getGlobalBestPosition();
+        }
+    }
 
     return 0;
-
 }
 
 /* Código com multi thread, mas sem sincronização */
@@ -52,17 +50,19 @@ int main() {
     struct timespec start, finish;
     double elapsed;
 
-    void *threadFunc[100];
     pthread_t threadId[100];
-
-    for (int i=0; i<numberOfThreads; i++) {
-//        threadFunc[i] = popGenerator;
-    }
 
     /* Começando a contar o tempo */
     // clock_t begin = clock();
     clock_gettime(CLOCK_MONOTONIC, &start);
 
+    for (int i=0; i<numberOfThreads; i++) {
+        pthread_create(&threadId[i], NULL, popGenerator, (void *)i);
+    }
+
+    for (int i=0; i<numberOfThreads; i++) {
+        pthread_join(threadId[i], NULL);
+    }
 
     /* Terminando de contar o tempo */
     clock_gettime(CLOCK_MONOTONIC, &finish);
